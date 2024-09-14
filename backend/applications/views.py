@@ -44,3 +44,11 @@ class ApplicationsViewSet(viewsets.ModelViewSet):
 class ChatMessageViewSet(viewsets.ModelViewSet):
     queryset = ChatMessage.objects.all()
     serializer_class = ChatMessageSerializer
+
+    # Chats for current user
+    # def get_queryset(self):
+    #     status = ""
+
+    #     if self.request.query_params.get('status'):
+    #         status = self.request.query_params.get('status')
+    #         return Applications.objects.filter(status=status)
