@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <JobList jobs = {jobs}/>
+      <JobList/>
     </>
   )
 }
