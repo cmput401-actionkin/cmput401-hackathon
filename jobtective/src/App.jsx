@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import NavBar from '../components/NavBar'
 import JobList from '../components/JobList'
 import jobService from '../services/jobs'
