@@ -5,3 +5,4 @@ class ApplicationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Applications
         fields = ['companyname', 'position', 'date_applied', 'status']
+
