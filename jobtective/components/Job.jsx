@@ -1,7 +1,7 @@
-const Job = ({ }) => {
+const Job = ({}) => {
     return (
         <li> 
-            <p>Junior Developer</p>
+           <span>Junior Developer</span>
         </li>
     )
 }
