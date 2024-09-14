@@ -13,8 +13,6 @@ def create_notification_if_status_changed(sender, instance, **kwargs):
  
     # Check if the status has changed
     old_instance = Applications.objects.get(pk=instance.pk)
-    print(old_instance.status)
-    print(instance.status)
     if old_instance.status != instance.status:
         # Create a notification
         Notifications.objects.create(
