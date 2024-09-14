@@ -5,20 +5,15 @@
 }
 
 .table-row-item:nth-child(odd) {
-  background-color: #000000;
+  background-color: #c0bcbc;
 }
 
-.table-row-item:last-child td:first-child {
-  border-bottom-left-radius: 12px;
-}
-
-.table-row-item:last-child td:last-child {
-  border-bottom-right-radius: 12px;
+.table-row-item:nth-child(even) {
+  background-color: #a49d9d;
 }
 
 .table-cell {
   padding: 12px;
-  border-bottom: 1px solid #e0e0e0;
   text-align: left;
 }
 
@@ -26,4 +21,14 @@
   width: 100%;
   margin: 0 10px;
   table-layout: fixed;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
 }
