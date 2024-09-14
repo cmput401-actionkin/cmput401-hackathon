@@ -1,4 +1,3 @@
-
 from rest_framework import viewsets
 from .models import Applications, ChatMessage
 from .serializers import ApplicationSerializer, ChatMessageSerializer
