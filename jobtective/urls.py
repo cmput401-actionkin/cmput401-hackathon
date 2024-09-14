@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers, serializers, viewsets
 from applications.models import Applications
+from rest_framework.authtoken.views import obtain_auth_token  # DRF's built-in token auth view
+from register.views import register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('applications/', include('applications.urls')),
     path('api-auth/', include('rest_framework.urls')),
+    path('api/token/', obtain_auth_token, name='api_token_auth'),
+    path('api/register/', register, name='register'), 
 ]
