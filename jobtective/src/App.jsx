@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Job from '../components/Job'
 import NavBar from '../components/NavBar'
+import JobList from '../components/JobList'
+import jobService from '../services/jobs'
 
 function App() {
 
@@ -12,7 +11,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <Job/>
+      <JobList/>
     </>
   )
 }
