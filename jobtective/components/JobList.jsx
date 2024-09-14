@@ -1,10 +1,18 @@
 import Job from '../components/Job'
 
-const JobList = () => {
-
+const JobList = (jobs) => {
+    
+    console.log(jobs)
+    
     return (
         <>
-            <Job/>
+            {
+                jobs && jobs.length > 0 ?
+                    jobs.map( job => {
+                        <Job job = {job} />
+                    })
+                : <p> No Jobs Available</p>
+            }
         </>
     )
 }

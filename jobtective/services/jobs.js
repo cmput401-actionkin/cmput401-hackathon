@@ -6,12 +6,22 @@
 import axios from 'axios'
 
 // e.g. http://localhost:3001/api/jobs 
-const baseUrl = 'insert api url here'
+const baseUrl = 'http://127.0.0.1:8000/applications/'
+
+const username = 'joe'
+const password = 'mama'
+
+const base64encodedData = btoa(`${username}:${password}`)
 
 const getAll = () => {
     
     // we do a get request using axios asynchronously and it should return a promise (placeholder) until it is fulfilled (i.e. data is received)
-    const request = axios.get(baseUrl)
+    const request = axios.get(baseUrl, {
+        headers: {
+            'Content-Type' : 'application/json',
+            'Authorization': `Basic ${base64encodedData}`
+        }
+    })
 
     // once we received the data, we then get the data part of the response and return it (or rather give) to whoever called getAll
     return request.then(response => response.data)
